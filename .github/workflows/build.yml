@@ -10,9 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     
-    - uses: actions/setup-java@v4
+    - uses: actions/setup-java@v5
       with:
         distribution: temurin
         java-version: 17 # Updated to Java 17, as newer Gradle versions require it
@@ -30,7 +30,7 @@ jobs:
         
         ./gradlew :module:assembleRelease
         
-    - uses: actions/upload-artifact@v4
+    - uses: actions/upload-artifact@v5
       with:
         name: zygisk-il2cppdumper
         path: out/magisk_module_release/
